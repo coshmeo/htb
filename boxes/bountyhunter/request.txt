@@ -1,0 +1,14 @@
+POST /tracker_diRbPr00f314.php HTTP/1.1
+Host: 10.10.11.100
+Content-Length: 205
+Accept: */*
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://10.10.11.100
+Referer: http://10.10.11.100/log_submit.php
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Connection: close
+
+data=PD94bWwgIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9IklTTy04ODU5LTEiPz4KCQk8YnVncmVwb3J0PgoJCTx0aXRsZT48L3RpdGxlPgoJCTxjd2U%2BPC9jd2U%2BCgkJPGN2c3M%2BPC9jdnNzPgoJCTxyZXdhcmQ%2BPC9yZXdhcmQ%2BCgkJPC9idWdyZXBvcnQ%2B

