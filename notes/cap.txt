@@ -1,0 +1,8 @@
+cap
+10.10.10.245
+10.10.14.11
+
+username 'nathan' | password 'Buck3tH4TF0RM3!'
+can download network traffic packet (.pcap file)
+
+

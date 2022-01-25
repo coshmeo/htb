@@ -1,0 +1,8 @@
+msf console
+local exploit suggester
+	-requires a meterpreter session
+	-search suggester
+	-use 0
+	-set session 1
+	-run
+
