@@ -1,5 +1,5 @@
 coshmeo@gmail.com
-thisisntmyrealpassword
+
 
 gobuster dir -u [url] -w [wordlist] -x [extensions] -o [outfile name] -t [thread count]
 use x to search for specific page extensions based on site architecture (.aspx, .txt, etc).
