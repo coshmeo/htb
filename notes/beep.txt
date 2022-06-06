@@ -2,5 +2,7 @@
 
 login page for elastix (?)
 
-elastix session cookie
-j1b6sfhvno0ke8qsljqqt339h5
+elastix session cookie          PHPSESSID
+j1b6sfhvno0ke8qsljqqt339h5      c49lc01ju648e4jb2vdcih5591
+
+found /admin/config.php, can see layout of page but doesn't show any content without admin creds
